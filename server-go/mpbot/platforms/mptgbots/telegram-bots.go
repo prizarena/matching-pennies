@@ -1,4 +1,4 @@
-package tgbots
+package mptgbots
 
 import (
 	"github.com/strongo/app"

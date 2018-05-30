@@ -6,11 +6,11 @@ import (
 	"github.com/strongo/app"
 	"github.com/strongo/app/gaestandard"
 	"github.com/strongo-games/bidding-tictactoe/server-go/btttbot-secrets"
-	"github.com/strongo-games/matching-pennies/server-go/mpbot/platforms/tgbots"
 	"github.com/strongo-games/matching-pennies/server-go/mpbot/routing"
 	"github.com/strongo/bots-framework/core"
 	"github.com/strongo/bots-framework/platforms/telegram"
 	"net/http"
+	"github.com/strongo-games/matching-pennies/server-go/mpbot/platforms/mptgbots"
 )
 
 func InitBot(httpRouter *httprouter.Router, botHost bots.BotHost, appContext bots.BotAppContext) error {
@@ -37,7 +37,7 @@ func InitBot(httpRouter *httprouter.Router, botHost bots.BotHost, appContext bot
 	driver.RegisterWebhookHandlers(httpRouter, "/bot",
 		telegram.NewTelegramWebhookHandler(
 			func(c context.Context) bots.SettingsBy {
-				return tgbots.Bots(c, gaestandard.GetEnvironment(c), routing.WebhooksRouter)
+				return mptgbots.Bots(c, gaestandard.GetEnvironment(c), routing.WebhooksRouter)
 			}, // Maps of bots by code, language, token, etc...
 			newTranslator, // Creates newTranslator that gets a context.Context (for logging purpose)
 		),
