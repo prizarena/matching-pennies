@@ -5,12 +5,12 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"github.com/strongo/app"
 	"github.com/strongo/app/gaestandard"
-	"github.com/strongo-games/bidding-tictactoe/server-go/btttbot-secrets"
-	"github.com/strongo-games/matching-pennies/server-go/mpbot/routing"
+	"github.com/prizarena/bidding-tictactoe/server-go/btttbot-secrets"
+	"github.com/prizarena/matching-pennies/server-go/mpbot/routing"
 	"github.com/strongo/bots-framework/core"
 	"github.com/strongo/bots-framework/platforms/telegram"
 	"net/http"
-	"github.com/strongo-games/matching-pennies/server-go/mpbot/platforms/mptgbots"
+	"github.com/prizarena/matching-pennies/server-go/mpbot/platforms/mptgbots"
 )
 
 func InitBot(httpRouter *httprouter.Router, botHost bots.BotHost, appContext bots.BotAppContext) error {

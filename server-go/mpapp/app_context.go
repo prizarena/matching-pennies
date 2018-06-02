@@ -4,13 +4,13 @@ import (
 	"context"
 	"github.com/pkg/errors"
 	"github.com/strongo/app"
-	// "github.com/strongo-games/bidding-tictactoe/server-go/rsp-trans"
-	"github.com/strongo-games/matching-pennies/server-go/mpmodels"
+	// "github.com/prizarena/bidding-tictactoe/server-go/rsp-trans"
+	"github.com/prizarena/matching-pennies/server-go/mpmodels"
 	"github.com/strongo/bots-framework/core"
 	"github.com/strongo/bots-framework/platforms/telegram"
 	"reflect"
 	"time"
-	"github.com/strongo-games/matching-pennies/server-go/mptrans"
+	"github.com/prizarena/matching-pennies/server-go/mptrans"
 )
 
 type BiddingTicTacToeAppContext struct {

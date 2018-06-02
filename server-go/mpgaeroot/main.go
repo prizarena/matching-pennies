@@ -1,7 +1,7 @@
 package mpgaeroot
 
 import (
-	"github.com/strongo-games/matching-pennies/server-go/mpapp"
+	"github.com/prizarena/matching-pennies/server-go/mpapp"
 	"github.com/strongo/log"
 	"github.com/strongo/bots-framework/hosts/appengine"
 	"github.com/julienschmidt/httprouter"
